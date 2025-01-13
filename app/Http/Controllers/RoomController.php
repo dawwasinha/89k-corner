@@ -12,7 +12,8 @@ class RoomController extends Controller
      */
     public function index()
     {
-        //
+        $rooms = Room::all();
+        return view('room.index', compact('rooms'));
     }
 
     /**
@@ -20,7 +21,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        //
+        return view('room.create');
     }
 
     /**
@@ -28,7 +29,13 @@ class RoomController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+            'price' => 'required|integer|min:0',
+            'type_room' => 'required|string|max:255',
+            'facility' => 'required|string|max:255',
+        ]);
+        Room::create($request->all());
+        return redirect()->route('room.index')->with('success', 'Room berhasil ditambahkan.');
     }
 
     /**
@@ -36,7 +43,7 @@ class RoomController extends Controller
      */
     public function show(Room $room)
     {
-        //
+        return view('room.show', compact('room'));
     }
 
     /**
@@ -44,7 +51,7 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
-        //
+        return view('room.edit', compact('room'));
     }
 
     /**
@@ -52,7 +59,14 @@ class RoomController extends Controller
      */
     public function update(Request $request, Room $room)
     {
-        //
+        $request->validate([
+            'price' => 'required|integer|min:0',
+            'type_room' => 'required|string|max:255',
+            'facility' => 'required|string|max:255',
+        ]);
+
+        $room->update($request->all());
+        return redirect()->route('room.index')->with('success', 'Room berhasil diperbarui.');
     }
 
     /**
@@ -60,6 +74,7 @@ class RoomController extends Controller
      */
     public function destroy(Room $room)
     {
-        //
+        $room->delete();
+        return redirect()->route('room.index')->with('success', 'Room berhasil dihapus.');
     }
 }

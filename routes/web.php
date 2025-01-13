@@ -21,4 +21,9 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('/room', App\Http\Controllers\RoomController::class);
+Route::resource('room', App\Http\Controllers\RoomController::class)->middleware('auth');
+Route::resource('user', App\Http\Controllers\UserController::class)->middleware('auth');
+
+Route::get('/pengaduan', function() {
+    return "ini pengaaduan";
+});
