@@ -17,6 +17,8 @@ return new class extends Migration
             $table->integer('price');
             $table->string('type_room');
             $table->string('facility');
+            $table->string('image')->nullable();
+            $table->enum('status', ['available', 'unavailable'])->default('available');
             $table->timestamps();
         });
     }

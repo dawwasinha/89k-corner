@@ -16,6 +16,7 @@
                                 <th>#</th>
                                 <th>{{ __('Name') }}</th>
                                 <th>{{ __('Email') }}</th>
+                                <th>{{ __('Password') }}</th>
                                 <th>{{ __('Actions') }}</th>
                             </tr>
                         </thead>
@@ -25,6 +26,7 @@
                                     <td>{{ $loop->iteration }}</td>
                                     <td>{{ $user->name }}</td>
                                     <td>{{ $user->email }}</td>
+                                    <td>{{ $user->password }}</td>
                                     <td>
                                         <a href="{{ route('user.show', $user->id) }}" class="btn btn-info btn-sm">{{ __('View') }}</a>
                                         <a href="{{ route('user.edit', $user->id) }}" class="btn btn-warning btn-sm">{{ __('Edit') }}</a>
