@@ -78,7 +78,7 @@
                 <div class="max-w-4xl mx-auto px-4">
                     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         <div class="space-y-4 md:col-span-2 lg:col-span-3">
-                            <img src="{{ asset('images/about/rumah3.jpeg') }}" alt="rumah3" class="w-full rounded-2xl shadow-lg"/>
+                            <img src="{{ asset('images/about/depan.jpg') }}" alt="rumah3" class="w-full rounded-2xl shadow-lg"/>
                             <p class="text-gray-700 text-sm md:text-base text-justify">
                                 Kos 89k hadir dengan misi untuk menyediakan akomodasi yang praktis, aman, dan
                                 terjangkau bagi mahasiswa dan karyawan. Dengan berbagai fasilitas lengkap dan
@@ -96,34 +96,19 @@
                         </div>
 
                         <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah.jpeg') }}" alt="rumah1" class="w-full rounded-2xl shadow-lg"/>
+                            <img src="{{ asset('images/about/about_us2.jpg') }}" alt="about_us2" class="w-full rounded-2xl shadow-lg"/>
                         </div>
                         <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah2.jpeg') }}" alt="rumah2" class="w-full rounded-2xl shadow-lg"/>
+                            <img src="{{ asset('images/about/about_us3.jpg') }}" alt="about_us3" class="w-full rounded-2xl shadow-lg"/>
                         </div>
                         <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah3.jpeg') }}" alt="rumah4" class="w-full rounded-2xl shadow-lg"/>
+                            <img src="{{ asset('images/about/about_us4.jpg') }}" alt="about_us4" class="w-full rounded-2xl shadow-lg"/>
                         </div>
                         <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah4.jpeg') }}" alt="rumah5" class="w-full rounded-2xl shadow-lg"/>
+                            <img src="{{ asset('images/about/about_us.jpg') }}" alt="about_us1" class="w-full rounded-2xl shadow-lg"/>
                         </div>
                         <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah5.jpeg') }}" alt="rumah6" class="w-full rounded-2xl shadow-lg"/>
-                        </div>
-                        <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah6.jpeg') }}" alt="rumah6" class="w-full rounded-2xl shadow-lg"/>
-                        </div>
-                        <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah7.jpeg') }}" alt="rumah7" class="w-full rounded-2xl shadow-lg"/>
-                        </div>
-                        <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah8.jpeg') }}" alt="rumah8" class="w-full rounded-2xl shadow-lg"/>
-                        </div>
-                        <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah9.jpeg') }}" alt="rumah9" class="w-full rounded-2xl shadow-lg"/>
-                        </div>
-                        <div class="space-y-4">
-                            <img src="{{ asset('images/about/rumah10.jpeg') }}" alt="rumah10" class="w-full rounded-2xl shadow-lg"/>
+                            <img src="{{ asset('images/about/about_us1.jpg') }}" alt="about_us1" class="w-full rounded-2xl shadow-lg"/>
                         </div>
                     </div>
                 </div>
@@ -136,7 +121,7 @@
                 <div class="flex flex-wrap mb-16 -mx-4">
                     <div class="w-full lg:w-3/12 px-4 mb-8 lg:mb-0">
                         <a class="inline-block mb-4" href="#">
-                            <img src="images/logo-2.svg" alt="Logo" class="w-32"/>
+                            <img src="LOGO_KOS.png" alt="Logo" class="w-32"/>
                         </a>
                         <p class="text-gray-600 text-sm">Kos putri nyaman strategis dekat kampus Unesa Ketintang dan Telkom Surabaya.</p>
                     </div>

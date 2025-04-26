@@ -67,7 +67,7 @@
               </nav>
             </div>
     
-        <div class="relative pt-36 bg-cover bg-center" style="background-image: url('{{ asset('images/about/rumah10.jpeg') }}');">
+        <div class="relative pt-36 bg-cover bg-center" style="background-image: url('{{ asset('images/about/depan3.jpg') }}');">
             <div class="container mx-auto px-4 relative">
                 <div class="max-w-lg xl:max-w-xl mx-auto mb-12 lg:mb-0 text-center">
                     <h1 class="font-heading text-white text-4xl xs:text-6xl xl:text-7xl tracking-tight mb-8 font-extrabold">
@@ -83,11 +83,11 @@
                                         <span class="block md:ml-4 ml-2  text-base lg:text-xl font-medium">Hubungi via WhatsApp</span>
                                     </div>
                                     <p class="text-gray-700 text-left mb-4">Klik tombol di bawah untuk chat langsung via WhatsApp.</p>
-                                    <a href="https://wa.me/6281234567890" class="inline-block w-full mt-4 px-6 py-2 bg-teal-900 text-white rounded-full hover:bg-teal-700 transition">Chat WhatsApp</a>
+                                    <a target="_blank" href="https://wa.me/6281330390247" class="inline-block w-full mt-4 px-6 py-2 bg-teal-900 text-white rounded-full hover:bg-teal-700 transition">Chat WhatsApp</a>
                                 </div>
                             </div>
 
-                            <div class="w-full shadow-lg rounded-xl text-center">
+                            <!-- <div class="w-full shadow-lg rounded-xl text-center">
                                 <div class="h-full py-10 px-5 xs:px-10 bg-white rounded-2xl shadow-md">
                                     <div class="flex items-center justify-start mb-4">
                                         <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.png" alt="Email" class="w-12 h-12">
@@ -96,7 +96,7 @@
                                     <p class="text-gray-700 text-left mb-4">Klik tombol di bawah untuk chat langsung via WhatsApp.</p>
                                     <a href="mailto:contact@yourwebsite.com" class="inline-block w-full mt-4 px-6 py-2 bg-teal-900 text-white rounded-full hover:bg-teal-700 transition">Kirim Email</a>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </div>
 
@@ -122,12 +122,12 @@
                         <div class="rounded-xl overflow-hidden shadow-lg">
                             <!-- Google Maps Embed -->
                             <iframe 
-                                class="w-full h-96 border-0" 
-                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3958.4208083546983!2d112.72842377583067!3d-7.199051692837873!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbf4a0bdf2d5%3A0xe4b87f3c3dc7f833!2sUniversitas%20Negeri%20Surabaya!5e0!3m2!1sen!2sid!4v1711499635491!5m2!1sen!2sid" 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
+                              class="w-full h-96 border-0 mt-8" 
+                              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3957.406817661946!2d112.7282828!3d-7.3081103!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd7fbea227b7749%3A0xb979637d586b2a91!2sKost%2089K%20Ketintang!5e0!3m2!1sid!2sid!4v1745255117991!5m2!1sid!2sid" 
+                              allowfullscreen="" 
+                              loading="lazy" 
+                              referrerpolicy="no-referrer-when-downgrade">
+                          </iframe>
                         </div>
                     </div>
                 </div>
@@ -143,7 +143,7 @@
           <!-- Logo & Deskripsi -->
           <div class="w-full lg:w-3/12 px-4 mb-8 lg:mb-0">
             <a class="inline-block mb-4" href="#">
-              <img src="images/logo-2.svg" alt="Logo" class="w-32"/>
+              <img src="LOGO_KOS.png" alt="Logo" class="w-32"/>
             </a>
             <p class="text-gray-600 text-sm">Kos putri nyaman strategis dekat kampus Unesa Ketintang dan Telkom Surabaya.</p>
           </div>

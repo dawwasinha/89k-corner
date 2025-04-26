@@ -12,6 +12,9 @@
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
+  <meta name="description" content="Kos putri nyaman, strategis, dan murah di Ketintang dekat kampus Unesa dan Telkom Surabaya. Pilihan terbaik untuk mahasiswa dan pekerja.">
+  <meta name="keywords" content="kos, kos ketintang, kos unesa, kos murah, kos putri, kos strategis, kos dekat kampus">
+  <meta name="author" content="89K - Corner">
   <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 <body class="antialiased bg-body text-body font-body">
@@ -316,7 +319,7 @@
           <!-- Logo & Deskripsi -->
           <div class="w-full lg:w-3/12 px-4 mb-8 lg:mb-0">
             <a class="inline-block mb-4" href="#">
-              <img src="images/logo-2.svg" alt="Logo" class="w-32"/>
+              <img src="LOGO_KOS.png" alt="Logo" class="w-32"/>
             </a>
             <p class="text-gray-600 text-sm">Kos putri nyaman strategis dekat kampus Unesa Ketintang dan Telkom Surabaya.</p>
           </div>

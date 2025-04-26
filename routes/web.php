@@ -5,8 +5,11 @@ use App\Http\Controllers\ChangePasswordController;
 use App\Http\Controllers\HomeAdminController;
 use App\Http\Controllers\InfoUserController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ReportController;
+use App\Http\Controllers\ReportReplyController;
 use App\Http\Controllers\ResetController;
 use App\Http\Controllers\SessionsController;
+use App\Models\Room;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -34,6 +37,9 @@ Route::get('/contact', function() {
 });
 
 Route::get('/room', function() {
+	$rooms = Room::all(); // Mengambil semua data kamar
+    return view('room', compact('rooms'));
+
     return view('room');
 });
 
@@ -48,9 +54,15 @@ Route::get('/pengaduan', function() {
 });
 
 
-Route::group(['middleware' => 'auth'], function () {
+Route::group(['middleware' => ['auth', 'admin']], function () {
 	Route::get('dashboard', function () {
-		return view('dashboard');
+		$totalUser = \App\Models\User::count();
+		$totalRoom = \App\Models\Room::count();
+
+		return view('dashboard', [
+			'totalUser' => $totalUser,
+			'totalRoom' => $totalRoom,
+		]);
 	})->name('dashboard');
 
 	Route::get('/user-management', [App\Http\Controllers\AdminUserController::class, 'index'])->name('user_admin.user.index');
@@ -106,6 +118,25 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/login', function () {
 		return view('dashboard');
 	})->name('sign-up');
+});
+
+// Routes untuk renter
+Route::group(['middleware' => ['auth', 'renter']], function () {
+    Route::get('/renter-dashboard', function () {
+        return view('renter.dashboard');
+    })->name('renter.dashboard');
+
+	Route::get('/report-management', [ReportController::class, 'index'])->name('reports.index');
+
+    // Form & aksi buat laporan baru
+    Route::get('/report-management/create', [ReportController::class, 'create'])->name('reports.create'); // Optional jika pakai Blade form
+    Route::post('/report-management', [ReportController::class, 'store'])->name('reports.store');
+
+    // Detail laporan + reply
+    Route::get('/report-management/{report}', [ReportController::class, 'show'])->name('reports.show');
+
+    // Kirim balasan ke laporan
+    Route::post('/report-management/{report}/replies', [ReportReplyController::class, 'store'])->name('reports.replies.store');
 });
 
 Route::group(['middleware' => 'guest'], function () {

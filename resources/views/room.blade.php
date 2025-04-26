@@ -1,4 +1,3 @@
-
 <html lang="en">
   <head>
     <title>89K - Corner</title>
@@ -77,120 +76,19 @@
 
                 <!-- Grid Layout -->
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <!-- Room Card -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('images/about/rumah.jpeg') }}" alt="Room 1" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-xl text-gray-800">Modern Cozy Room</h3>
-                            <p class="text-gray-600">Located in the heart of the city.</p>
-                            <div class="flex items-center justify-between mt-4">
-                                <span class="text-green-600 font-bold text-lg">$45/night</span>
-                                <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
+                    @foreach ($rooms as $room)
+                        <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                            <img src="{{ asset('storage/' . $room->image) }}" alt="{{ $room->name }}" class="w-full h-64 object-cover md:h-80 lg:h-96">
+                            <div class="p-4">
+                                <h3 class="font-semibold text-xl text-gray-800">{{ $room->name }}</h3>
+                                <p class="text-gray-600">{{ $room->facility }}</p>
+                                <div class="flex items-center justify-between mt-4">
+                                    <span class="text-green-600 font-bold text-lg">${{ $room->price }}/month</span>
+                                    <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Room Card -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('images/about/rumah2.jpeg') }}" alt="Room 2" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-xl text-gray-800">Luxury Suite</h3>
-                            <p class="text-gray-600">Enjoy a premium stay with top amenities.</p>
-                            <div class="flex items-center justify-between mt-4">
-                                <span class="text-green-600 font-bold text-lg">$80/night</span>
-                                <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Room Card -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('images/about/rumah3.jpeg') }}" alt="Room 3" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-xl text-gray-800">Minimalist Studio</h3>
-                            <p class="text-gray-600">A simple yet elegant room for your stay.</p>
-                            <div class="flex items-center justify-between mt-4">
-                                <span class="text-green-600 font-bold text-lg">$55/night</span>
-                                <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('images/about/rumah4.jpeg') }}" alt="Room 1" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-xl text-gray-800">Modern Cozy Room</h3>
-                            <p class="text-gray-600">Located in the heart of the city.</p>
-                            <div class="flex items-center justify-between mt-4">
-                                <span class="text-green-600 font-bold text-lg">$45/night</span>
-                                <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Room Card -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('images/about/rumah5.jpeg') }}" alt="Room 2" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-xl text-gray-800">Luxury Suite</h3>
-                            <p class="text-gray-600">Enjoy a premium stay with top amenities.</p>
-                            <div class="flex items-center justify-between mt-4">
-                                <span class="text-green-600 font-bold text-lg">$80/night</span>
-                                <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Room Card -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('images/about/rumah6.jpeg') }}" alt="Room 3" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-xl text-gray-800">Minimalist Studio</h3>
-                            <p class="text-gray-600">A simple yet elegant room for your stay.</p>
-                            <div class="flex items-center justify-between mt-4">
-                                <span class="text-green-600 font-bold text-lg">$55/night</span>
-                                <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('images/about/rumah7.jpeg') }}" alt="Room 1" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-xl text-gray-800">Modern Cozy Room</h3>
-                            <p class="text-gray-600">Located in the heart of the city.</p>
-                            <div class="flex items-center justify-between mt-4">
-                                <span class="text-green-600 font-bold text-lg">$45/night</span>
-                                <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Room Card -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('images/about/rumah8.jpeg') }}" alt="Room 2" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-xl text-gray-800">Luxury Suite</h3>
-                            <p class="text-gray-600">Enjoy a premium stay with top amenities.</p>
-                            <div class="flex items-center justify-between mt-4">
-                                <span class="text-green-600 font-bold text-lg">$80/night</span>
-                                <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Room Card -->
-                    <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-                        <img src="{{ asset('images/about/rumah9.jpeg') }}" alt="Room 3" class="w-full h-48 object-cover">
-                        <div class="p-4">
-                            <h3 class="font-semibold text-xl text-gray-800">Minimalist Studio</h3>
-                            <p class="text-gray-600">A simple yet elegant room for your stay.</p>
-                            <div class="flex items-center justify-between mt-4">
-                                <span class="text-green-600 font-bold text-lg">$55/night</span>
-                                <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </section>
@@ -202,7 +100,7 @@
                 <div class="flex flex-wrap mb-16 -mx-4">
                     <div class="w-full lg:w-3/12 px-4 mb-8 lg:mb-0">
                         <a class="inline-block mb-4" href="#">
-                            <img src="images/logo-2.svg" alt="Logo" class="w-32"/>
+                            <img src="LOGO_KOS.png" alt="Logo" class="w-32"/>
                         </a>
                         <p class="text-gray-600 text-sm">Kos putri nyaman strategis dekat kampus Unesa Ketintang dan Telkom Surabaya.</p>
                     </div>

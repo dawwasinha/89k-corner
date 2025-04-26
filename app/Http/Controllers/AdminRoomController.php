@@ -12,6 +12,7 @@ class AdminRoomController extends Controller
     public function index()
     {
         $rooms = Room::all();
+        // dd($rooms);
         return view('user_admin.room.index', compact('rooms'));
     }
 
