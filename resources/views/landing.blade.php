@@ -1,4 +1,3 @@
-
 <html lang="en">
 <head>
   <title>89K - Corner</title>
@@ -8,7 +7,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Readex+Pro:400,500,600,700&amp;subset=latin"/>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&amp;display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="css/tailwind/tailwind.min.css"/>
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('LOGO_KOS.png') }}"/>
   <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.3/dist/cdn.min.js" defer="defer"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 

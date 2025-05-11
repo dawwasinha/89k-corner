@@ -22,7 +22,8 @@ class User extends Authenticatable
         'email',
         'password',
         'room_id',
-        'role', 
+        'role',
+        'photo'
     ];
 
     /**
@@ -48,5 +49,11 @@ class User extends Authenticatable
     public function room()
     {
         return $this->belongsTo(Room::class, 'room_id');
+    }
+
+
+    public function payments()
+    {
+        return $this->hasMany(Payment::class);
     }
 }

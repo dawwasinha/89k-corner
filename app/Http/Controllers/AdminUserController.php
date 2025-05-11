@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\PaymentReminderMail;
+use App\Models\Payment;
 use App\Models\Room;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 
 class AdminUserController extends Controller
@@ -48,7 +52,9 @@ class AdminUserController extends Controller
     public function show($id)
     {
         $user = User::with('room')->findOrFail($id);
-        $rooms = Room::all();
+        $rooms = Room::where('status', 'available')->get();
+
+        // return $user;
 
         return view('user_admin.user.show', compact('user', 'rooms'));
     }
@@ -62,6 +68,43 @@ class AdminUserController extends Controller
         ]);
 
         $user = User::findOrFail($id);
+
+        if ($request->has('room_id')) {
+            $room = Room::find($request->room_id);
+
+            if (!$room) {
+                return redirect()->back()->with('error', 'Room not found!');
+            }
+
+            // Ubah status kamar lama (jika ada) menjadi available
+            if ($user->room_id) {
+                Room::where('id', $user->room_id)->update([
+                    'status' => 'available',
+                ]);
+            }
+
+            // Ubah status kamar baru menjadi unavailable
+            Room::where('id', $request->room_id)->update([
+                'status' => 'unavailable',
+            ]);
+
+            // Buat catatan pembayaran baru
+            $payment = Payment::create([
+                'user_id'     => $user->id,
+                'room_id'     => $request->room_id,
+                'due_date'    => now()->addMonth(),
+                'amount'      => $room->price ?? 0,
+                'status'      => 'pending',
+                'invoice_code'=> 'INV' . now()->format('Ymd') . '-' . strtoupper(Str::random(5)),
+            ]);
+
+            // Kirim email pengingat pembayaran
+            Mail::to($user->email)->send(new PaymentReminderMail($payment));
+
+            // Perbarui data user dengan room baru
+            $user->room_id = $request->room_id;
+        }
+
 
         $user->update([
             'name' => $request->name,

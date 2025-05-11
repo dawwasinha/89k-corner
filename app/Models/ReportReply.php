@@ -13,7 +13,7 @@ class ReportReply extends Model
         'report_id',
         'user_id',
         'parent_id',
-        'message',
+        'body',
     ];
 
     public function report()

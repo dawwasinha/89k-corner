@@ -83,8 +83,10 @@
                                 <h3 class="font-semibold text-xl text-gray-800">{{ $room->name }}</h3>
                                 <p class="text-gray-600">{{ $room->facility }}</p>
                                 <div class="flex items-center justify-between mt-4">
-                                    <span class="text-green-600 font-bold text-lg">${{ $room->price }}/month</span>
-                                    <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
+                                    <span class="text-green-600 font-bold text-lg">Rp{{ number_format($room->price, 0, ',', '.') }}/month</span>
+                                    <a href="https://wa.me/6281330390247" target="_blank">
+                                        <button class="bg-green-600 text-white px-4 py-2 rounded-md">Book Now</button>
+                                    </a>
                                 </div>
                             </div>
                         </div>

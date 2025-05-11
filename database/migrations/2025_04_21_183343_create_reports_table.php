@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('title');
             $table->string('image')->nullable();
             $table->text('description');
-            $table->enum('status', ['open', 'closed'])->default('open');
+            $table->enum('status', [ 'on-review', 'rejected', 'open', 'closed'])->default('on-review');
             $table->timestamps();
         });
     }

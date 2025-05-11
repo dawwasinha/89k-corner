@@ -24,50 +24,60 @@
                 <form action="{{ route('reports.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
 
-                    <!-- Input Title -->
+                    <!-- Select Report Title -->
                     <div class="mb-3">
                         <label for="title" class="form-label">Report Title</label>
-                        <input type="text" name="title" class="form-control" placeholder="Enter report title" required>
-                    </div>
-
-                    <!-- Input Description -->
-                    <div class="mb-3">
-                        <label for="description" class="form-label">Report Description</label>
-                        <textarea class="form-control" name="description" rows="5" placeholder="Describe the issue..." required></textarea>
-                    </div>
-
-                    <!-- Input Room -->
-                    <div class="mb-3">
-                        <label for="room_id" class="form-label">Related Room</label>
-                        <select name="room_id" class="form-select" required>
-                            <option value="">-- Select Room --</option>
-                            @foreach($rooms as $room)
-                                <option value="{{ $room->id }}">{{ $room->name }}</option>
-                            @endforeach
+                        <select name="title" id="title" class="form-select" required>
+                            <option value="">-- Select Report Type --</option>
+                            <option value="Kerusakan Fasilitas">Kerusakan Fasilitas</option>
+                            <option value="Kejadian">Kejadian</option>
                         </select>
                     </div>
 
-                    <!-- Input Status -->
-                    <div class="mb-3">
-                        <label for="status" class="form-label">Status</label>
-                        <select name="status" class="form-select" required>
-                            <option value="open">Open</option>
-                            <option value="closed">Closed</option>
-                        </select>
-                    </div>
+                    <!-- Elemen lain disembunyikan sampai title dipilih -->
+                    <div id="additional-fields" style="display: none;">
+                        <!-- Input Description -->
+                        <div class="mb-3">
+                            <label for="description" class="form-label">Report Description</label>
+                            <textarea class="form-control" name="description" rows="5" placeholder="Describe the issue..." required></textarea>
+                        </div>
 
-                    <!-- Input Image -->
-                    <div class="mb-3">
-                        <label for="image" class="form-label">Upload Image</label>
-                        <input type="file" name="image" class="form-control" accept="image/*">
-                    </div>
+                        <input type="text" name="room_id" class="form-control" value="{{ $room->id }}" hidden>
 
-                    <!-- Button Submit -->
-                    <button type="submit" class="btn btn-primary">Submit Report</button>
-                    <a href="{{ route('reports.index') }}" class="btn btn-secondary">Back to Reports</a>
+                        <!-- Input Status -->
+                        <div class="mb-3">
+                            <label for="status" class="form-label">Status</label>
+                            <select name="status" class="form-select" required>
+                                <option value="open">Open</option>
+                                <option value="closed">Closed</option>
+                            </select>
+                        </div>
+
+                        <!-- Input Image -->
+                        <div class="mb-3">
+                            <label for="image" class="form-label">Upload Image</label>
+                            <input type="file" name="image" class="form-control" accept="image/*">
+                        </div>
+
+                        <!-- Button Submit -->
+                        <button type="submit" class="btn btn-primary">Submit Report</button>
+                        <a href="{{ route('reports.index') }}" class="btn btn-secondary">Back to Reports</a>
+                    </div>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
+<!-- Script untuk menampilkan form setelah title dipilih -->
+<script>
+    document.getElementById('title').addEventListener('change', function () {
+        const additionalFields = document.getElementById('additional-fields');
+        if (this.value === "Kerusakan Fasilitas" || this.value === "Kejadian") {
+            additionalFields.style.display = 'block';
+        } else {
+            additionalFields.style.display = 'none';
+        }
+    });
+</script>
 @endsection

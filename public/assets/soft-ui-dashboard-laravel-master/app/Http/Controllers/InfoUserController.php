@@ -13,7 +13,7 @@ class InfoUserController extends Controller
 
     public function create()
     {
-        return view('laravel-examples/user-profile');
+        $user = Auth::user(); // ambil data user yang login
     }
 
     public function store(Request $request)
