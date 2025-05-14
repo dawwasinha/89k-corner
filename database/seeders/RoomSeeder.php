@@ -34,6 +34,7 @@ class RoomSeeder extends Seeder
                 'updated_at' => Carbon::parse('2025-04-21 17:18:46'),
             ],
             [
+            
                 'id' => 6,
                 'name' => 'Kamar 1.3',
                 'price' => 350000,

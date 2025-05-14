@@ -30,7 +30,7 @@
                           <li><a class="inline-block text-teal-900 hover:text-teal-700 font-medium" href="/room">Room</a></li>
                       </ul>
                       <div class="flex items-center justify-end">
-                          <div class="hidden md:block"><a class="inline-flex py-2.5 px-4 items-center justify-center text-sm font-medium text-teal-900 hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200" href="/login">Get Started</a></div>
+                          <div class="hidden md:block"><a class="inline-flex py-2.5 px-4 items-center justify-center text-sm font-medium text-teal-900 hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200" href="/login">Login</a></div>
                           <button class="md:hidden navbar-burger text-teal-900 hover:text-teal-800" x-on:click="mobileNavOpen = !mobileNavOpen">
                               <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                               <path d="M5.19995 23.2H26.7999" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -53,7 +53,7 @@
                           Kos putri nyaman strategis dekat kampus Unesa Ketintang Dan Telkom Surabaya.
                       </p>
 
-                      <div class="flex flex-col sm:flex-row justify-center"><a class="inline-flex py-4 px-6 mb-3 sm:mb-0 sm:mr-4 items-center justify-center text-lg font-medium text-white hover:text-teal-900 border border-teal-900 hover:border-lime-500 bg-teal-900 hover:bg-lime-500 rounded-full transition duration-200" href="/room">See our solutions</a><a class="inline-flex py-4 px-6 items-center justify-center text-lg font-medium text-black hover:text-white border border-teal-900 hover:bg-teal-900 rounded-full transition duration-200" href="/about">Get in touch</a></div>
+                      <div class="flex flex-col sm:flex-row justify-center"><a class="inline-flex py-4 px-6 mb-3 sm:mb-0 sm:mr-4 items-center justify-center text-lg font-medium text-white hover:text-teal-900 border border-teal-900 hover:border-lime-500 bg-teal-900 hover:bg-lime-500 rounded-full transition duration-200" href="/room">Booking Now</a></div>
                   </div>
                   <div class="flex -mx-4 items-end relative">
                       <div class="w-1/3 xs:w-1/2 lg:w-auto px-4 h-24 lg:h-48"></div>
@@ -253,41 +253,45 @@
             <div class="relative flex-shrink-0 w-full sm:w-87 h-full sm:h-112 mr-8 overflow-hidden">
               <div class="absolute bottom-0 left-0 w-full p-4">
                 <div class="p-4 bg-white rounded-xl">
-                  <span class="block font-medium">Jenny Wilson</span>
-                  <span class="text-sm text-gray-700">Senior Sustainability Consultant</span>
+                  <span class="block font-medium">Nadya - Telkom University  - S1 Sistem Informasi</span>
+                  <span class="text-sm text-gray-700">Aman, nyaman dan bersih juga. Karena hampir tiap hari di sapu dan pel sama penjaga kosannya, termasuk murah untuk kosan putri yg bersih</span>
                 </div>
               </div>
-              <img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/photo-worker-1.png') }}" alt=""/>
+              <img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/nadya.png') }}" alt=""/>
             </div>
 
             <!-- Slide 2 -->
             <div class="relative flex-shrink-0 w-full sm:w-87 h-full sm:h-112 mr-8 overflow-hidden">
               <div class="absolute bottom-0 left-0 w-full p-4">
                 <div class="p-4 bg-white rounded-xl">
-                  <span class="block font-medium">Cameron Williamson</span>
-                  <span class="text-sm text-gray-700">Senior Sustainability Consultant</span>
+                  <span class="block font-medium">Zefanya - Universitas Negeri Surabaya - S1 Ilmu Hukum
+
+                  </span>
+                  <span class="text-sm text-gray-700">Menurutku udah enak banget si di kost 89K. Dengan harga yang menurutku termasuk murah untuk kost di dekat kampus dibandingkan dengan kost yang lain
                 </div>
               </div>
-              <img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/photo-worker-2.png') }}" alt=""/>
+              <img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/zefanya.png') }}" alt=""/>
             </div>
 
             <div class="relative flex-shrink-0 w-full sm:w-87 h-full sm:h-112 mr-8 overflow-hidden">
             <div class="absolute bottom-0 left-0 w-full p-4">
-              <div class="p-4 bg-white rounded-xl"><span class="block font-medium">Jenny Wilson</span>                                  <span class="text-sm text-gray-700">Senior Sustainability Consultant</span></div>
-            </div><img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/photo-worker-1.png') }}" alt=""/>
+              <div class="p-4 bg-white rounded-xl"><span class="block font-medium">Salsabilla - Universitas Negeri Surabaya - D4 Manajemen Informatika</span>                                  <span class="text-sm text-gray-700">Menurutku nyaman dan bersih apalagi lokasi dekat dengan kampus terbilang murah dibandingkan dengan kos yang lain dengan fasilitas dan kenyamanan yang diberikan.</span></div>
+            </div><img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/salsa.png') }}" alt=""/>
           </div>
           <div class="relative flex-shrink-0 w-full sm:w-87 h-full sm:h-112 mr-8 overflow-hidden">
             <div class="absolute bottom-0 left-0 w-full p-4">
-              <div class="p-4 bg-white rounded-xl"><span class="block font-medium">Cameron Williamson</span>                                  <span class="text-sm text-gray-700">Senior Sustainability Consultant</span></div>
-            </div><img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/photo-worker-2.png') }}" alt=""/>
+              <div class="p-4 bg-white rounded-xl"><span class="block font-medium">Kayla - Universitas Negeri Surabaya - S1 Pendidikan Tata Rias</span>                                  <span class="text-sm text-gray-700">Merasa nyaman karena tempatnya bersih, semua kebutuhan alat disediakan
+dan harganya murah dengan fasilitas yang lengkap dan kamar sebagus itu
+</span></div>
+            </div><img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/kayla.png') }}" alt=""/>
           </div>
           <div class="relative flex-shrink-0 w-full sm:w-87 h-full sm:h-112 mr-8 overflow-hidden">
             <div class="absolute bottom-0 left-0 w-full p-4">
-              <div class="p-4 bg-white rounded-xl"><span class="block font-medium">Courtney Henry</span>                                  
-              <span class="text-sm text-gray-700">Energy Analysts</span></div>
-            </div><img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/photo-worker-3.png') }}" alt=""/>
+              <div class="p-4 bg-white rounded-xl"><span class="block font-medium">Syahra - Universitas Negeri Surabaya - S1 Pendidikan Teknologi Informasi</span>                                  
+              <span class="text-sm text-gray-700">Saya sangat puas tinggal di Kost 89K, tempatnya nyaman, bersih, dan aman karena ada CCTV. Dapurnya juga bersih dan rapi ada ibu penjaga yang selalu rutin membersihkan area kost. Kost ini juga aesthetic banget, bikin betah!</span></div>
+            </div><img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/syahra.png') }}" alt=""/>
           </div>
-          <div class="relative flex-shrink-0 w-full sm:w-87 h-full sm:h-112 mr-8 overflow-hidden">
+          <!-- <div class="relative flex-shrink-0 w-full sm:w-87 h-full sm:h-112 mr-8 overflow-hidden">
             <div class="absolute bottom-0 left-0 w-full p-4">
               <div class="p-4 bg-white rounded-xl"><span class="block font-medium">Jenny Wilson</span>                                  
               <span class="text-sm text-gray-700">Senior Sustainability Consultant</span></div>
@@ -304,7 +308,7 @@
               <div class="p-4 bg-white rounded-xl"><span class="block font-medium">Courtney Henry</span>                                  
               <span class="text-sm text-gray-700">Energy Analysts</span></div>
             </div><img class="block w-full h-full object-cover rounded-2xl" src="{{ asset('images/team/photo-worker-3.png') }}" alt=""/>
-          </div>
+          </div> -->
           </div>
         </div>
 
